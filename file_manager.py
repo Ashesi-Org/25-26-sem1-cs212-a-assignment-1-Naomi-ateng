@@ -14,11 +14,11 @@ def display_welcome():
     """Display welcome message to the user."""
     print("=" * 50)
     print("   Welcome to Python CLI File Manager!")
-    print()
     print("=" * 50)
     print("This is a simple file manager to demonstrate")
     print("Python fundamentals: variables, expressions,")
     print("statements, and functions.")
+    print()
     # TODO: Add a blank line after the welcome message
 
 
@@ -129,6 +129,7 @@ def process_user_command(choice,
                         valid_commands = "help, cal, info, quit"
 ):
     
+    
     """
     Process a user command and return the updated running state.
     
@@ -171,7 +172,9 @@ def main():
     
     # Main command loop
     # TODO: Initialize a variable to control the loop. Hint set running = True
-    running:bool = True
+    display_welcome()
+    running = True
+    
     while running:
         try:
             choice = get_user_choice()
